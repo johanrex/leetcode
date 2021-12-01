@@ -18,5 +18,16 @@ class Solution:
         values = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ]
         numerals = [ "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" ]
 
-        roman = ''
+        roman_answer = ""
+
+        for index, value in enumerate(values):
+            multiplier = num // value
+            if multiplier > 0:
+                roman_answer += numerals[index] * multiplier
+                num -= multiplier * value
+
+        return roman_answer
+
+s = Solution()
+print(s.intToRoman(999))
 

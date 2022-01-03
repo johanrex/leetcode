@@ -13,10 +13,13 @@ class ListNode:
         self.val = val
         self.next = next
 
-class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
 
-        result_node_first = None        
+class Solution:
+    def addTwoNumbers(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
+
+        result_node_first = None
         result_node_prev = None
 
         carry = 0
@@ -50,6 +53,7 @@ class Solution:
 # l1n1 = ListNode(2, next=ListNode(4, next=ListNode(3, next=ListNode(9))))
 # l2n1 = ListNode(5, next=ListNode(6, next=ListNode(4)))
 
+
 def create_linked_list(arr):
     first_node = None
     prev_node = None
@@ -65,6 +69,7 @@ def create_linked_list(arr):
 
     return first_node
 
+
 def print_linked_list(l):
     arr = []
     while True:
@@ -74,10 +79,10 @@ def print_linked_list(l):
             break
     print(arr)
 
-l1 = create_linked_list([9,9,9,9,9,9,9])
-l2 = create_linked_list([9,9,9,9])
+
+l1 = create_linked_list([9, 9, 9, 9, 9, 9, 9])
+l2 = create_linked_list([9, 9, 9, 9])
 
 s = Solution()
 l = s.addTwoNumbers(l1, l2)
 print_linked_list(l)
-

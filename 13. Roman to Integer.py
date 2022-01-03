@@ -28,18 +28,11 @@ Constraints:
 
 """
 
+
 class Solution:
     def romanToInt(self, s: str) -> int:
 
-        d = {
-            "M": 1000
-            ,"D": 500
-            ,"C": 100
-            ,"L": 50
-            ,"X": 10
-            ,"V": 5
-            ,"I": 1
-            }
+        d = {"M": 1000, "D": 500, "C": 100, "L": 50, "X": 10, "V": 5, "I": 1}
 
         num = 0
         prev_val = None
@@ -47,7 +40,7 @@ class Solution:
         for c in reversed(s):
             val = d[c]
 
-            if prev_val != None and val < prev_val: 
+            if prev_val != None and val < prev_val:
                 val *= -1
 
             num += val
@@ -56,6 +49,6 @@ class Solution:
 
         return num
 
-s = Solution()
-print(s.romanToInt('IV'))
 
+s = Solution()
+print(s.romanToInt("IV"))

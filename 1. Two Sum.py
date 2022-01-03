@@ -39,12 +39,12 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 
 from typing import List
 
+
 def sort_func(tup):
     return tup[0]
 
+
 class Solution:
-
-
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
         indexes = list(range(len(nums)))
@@ -54,11 +54,11 @@ class Solution:
         sorted_tuples = sorted(zipped, key=sort_func)
 
         idx_low = 0
-        idx_high = len(nums)-1
+        idx_high = len(nums) - 1
 
-        #assume solution exists
+        # assume solution exists
         while True:
-            
+
             val_low = sorted_tuples[idx_low][0]
             val_high = sorted_tuples[idx_high][0]
 
@@ -74,15 +74,15 @@ class Solution:
         return [sorted_tuples[idx_low][1], sorted_tuples[idx_high][1]]
 
 
-
 import random
-nums = random.sample(range(-109,109), 104)
+
+nums = random.sample(range(-109, 109), 104)
 target = nums[50] + nums[51]
 
-print(f'target: {target}')
+print(f"target: {target}")
 
 s = Solution()
 ans = s.twoSum(nums, target)
 print(ans)
 
-print(f'gives {nums[ans[0]]+nums[ans[1]]}')
+print(f"gives {nums[ans[0]]+nums[ans[1]]}")

@@ -40,8 +40,3 @@ class Solution:
 
         return ans
 
-
-s = Solution()
-print(s.countBits(2))
-print(s.countBits(5))
-print(s.countBits(10))
